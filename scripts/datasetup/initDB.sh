@@ -1,7 +1,7 @@
 #!/bin/sh
 # set -e
 SCRIPTS_DIR=`dirname $0`
-DATABASE_NAME="bahmni_pacs"
+DATABASE_NAME="bahmni_feed_integration_example"
 BAHMNI_PACS_DB_SERVER="localhost"
 
 if [ -f /etc/bahmni-installer/bahmni.conf ]; then
