@@ -16,7 +16,7 @@
     </parent>
 
     <modules>
-        <module>bahmni-feed-integration-example-webapp</module>
+        <module>feed-integration-webapp</module>
     </modules>
     <build>
         <extensions>
