@@ -29,8 +29,11 @@ The doc here assumes a directory "db" under the project directory
 
 ####  running the app
 > cd /parent-dir/bahmni-feed-integration-example/feed-integration-webapp/
+
 > cd feed-integration-webapp/
+
 > mvn clean install 
+
 > mvn spring-boot:run
 
 ####  check with the hsql db client 
