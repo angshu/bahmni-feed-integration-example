@@ -1,6 +1,8 @@
 .idea/
 .java-version
-.test.log
+.DS_Store
+test.log
+--path
 *.iml
 target/
 db/
