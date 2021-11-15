@@ -33,14 +33,11 @@ public class BahmniFeedIntegrationExample extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) throws Exception {
-
-        System.out.println("***************************");
-        System.out.println("***************************");
-        logger.error("************ Test **********");
+        System.out.println("************ Starting Feed integration example app **********");
+        logger.info("************ Starting Feed integration example app **********");
         SpringApplication.run(BahmniFeedIntegrationExample.class, args);
-        System.out.println("***************************");
-        System.out.println("***************************");
-
+        System.out.println("************ Started Feed integration example app **********");
+        logger.info("************ Started Feed integration example app **********");
     }
 
     @Bean

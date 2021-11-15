@@ -50,7 +50,7 @@ The doc here assumes a directory "db" under the project directory
  
  
  ### useful info
- 
+ * Change log level in the log4j2.xml, the log is output at /tmp/bahmni-feed-integration-example.log
  * Atomfeed set the markers to first page if you don't set it. 
  So, Set the markers manually after provisioning and before deployment. Especially openmrs patient/encounter feed as we are reading patient/encounter feed to figure out the appropriate actions.
  

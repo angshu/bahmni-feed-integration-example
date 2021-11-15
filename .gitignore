@@ -1,4 +1,6 @@
 .idea/
+.java-version
+.test.log
 *.iml
 target/
 db/
