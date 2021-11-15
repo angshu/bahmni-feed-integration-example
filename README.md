@@ -12,11 +12,11 @@ You may connect to any database you want and would need to configure properties 
 The doc here assumes a directory "db" under the project directory
 
 #### create db and start the database server
-> cd /parent-dir/bahmni-feed-integration-example/
+> cd /workspace-dir/bahmni-feed-integration-example/
 
 > mkdir db
 
-> cp /download-location/hsqldb-2.6.1.zip /parent-dir/bahmni-feed-integration-example/db/
+> cp /download-location/hsqldb-2.6.1.zip /workspace-dir/bahmni-feed-integration-example/db/
 
 > cd db/
 
@@ -27,8 +27,8 @@ The doc here assumes a directory "db" under the project directory
 > java -cp ../lib/hsqldb-jdk8.jar org.hsqldb.server.Server --database.0 file:testdb --dbname.0 bahmni_feed_client_example
 
 
-####  running the app
-> cd /parent-dir/bahmni-feed-integration-example/feed-integration-webapp/
+####  running the app 
+> cd /workspace-dir/bahmni-feed-integration-example/feed-integration-webapp/
 
 > cd feed-integration-webapp/
 
@@ -37,6 +37,8 @@ The doc here assumes a directory "db" under the project directory
 > mvn spring-boot:run
 
 ####  check with the hsql db client 
+> cd /workspace-dir/bahmni-feed-integration-example/db/hsqldb-2.6.1/hsqldb/data
+ 
 > java -cp ../lib/hsqldb-jdk8.jar org.hsqldb.util.DatabaseManager
 
 * The above show a rudimentary UI, specify
