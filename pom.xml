@@ -16,8 +16,7 @@
     </parent>
 
     <modules>
-        <module>vagrant-deploy</module>
-        <module>pacs-integration-webapp</module>
+        <module>bahmni-feed-integration-example-webapp</module>
     </modules>
     <build>
         <extensions>
