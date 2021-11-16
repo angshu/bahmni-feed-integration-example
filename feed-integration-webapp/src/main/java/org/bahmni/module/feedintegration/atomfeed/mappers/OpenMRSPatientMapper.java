@@ -1,6 +1,7 @@
 package org.bahmni.module.feedintegration.atomfeed.mappers;
 
 import org.bahmni.module.feedintegration.atomfeed.contract.patient.OpenMRSPatient;
+import org.bahmni.module.feedintegration.atomfeed.contract.patient.OpenMRSPatientFullRepresentation;
 import org.bahmni.webclients.ObjectMapperRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,4 +32,7 @@ public class OpenMRSPatientMapper {
         return patient;
     }
 
+    public OpenMRSPatientFullRepresentation mapFullRepresentation(String patientJSON) throws IOException {
+        return objectMapper.readValue(patientJSON, OpenMRSPatientFullRepresentation.class);
+    }
 }

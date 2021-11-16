@@ -4,6 +4,7 @@ import org.bahmni.module.feedintegration.atomfeed.client.ConnectionDetails;
 import org.bahmni.module.feedintegration.atomfeed.client.WebClientFactory;
 import org.bahmni.module.feedintegration.atomfeed.contract.encounter.OpenMRSEncounter;
 import org.bahmni.module.feedintegration.atomfeed.contract.patient.OpenMRSPatient;
+import org.bahmni.module.feedintegration.atomfeed.contract.patient.OpenMRSPatientFullRepresentation;
 import org.bahmni.module.feedintegration.atomfeed.mappers.OpenMRSEncounterMapper;
 import org.bahmni.module.feedintegration.atomfeed.mappers.OpenMRSPatientMapper;
 import org.bahmni.webclients.HttpClient;
@@ -35,6 +36,13 @@ public class OpenMRSService {
 
         String patientJSON = webClient.get(URI.create(urlPrefix + patientRestUrl + patientUuid+"?v=full"));
         return new OpenMRSPatientMapper().map(patientJSON);
+    }
+
+    public OpenMRSPatientFullRepresentation getPatientFR(String patientUrl) throws IOException, ParseException {
+        HttpClient webClient = WebClientFactory.getClient();
+        String urlPrefix = getURLPrefix();
+        String patientJSON = webClient.get(URI.create(urlPrefix + patientUrl));
+        return new OpenMRSPatientMapper().mapFullRepresentation(patientJSON);
     }
 
     private String getURLPrefix() {

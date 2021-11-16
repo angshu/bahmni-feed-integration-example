@@ -182,4 +182,11 @@
             <column name="comment" type="varchar(255)"/>
         </addColumn>
     </changeSet>
+
+    <changeSet id="example-202111161130" author="Angshu, Nazeer">
+        <comment>Adding schedulers for openmrs patient</comment>
+        <sql>
+            insert into quartz_cron_scheduler (name, cron_statement, start_delay, enabled) values ('openMRSPatientFeedJob', '0/15 * * * * ?', 0, true);
+        </sql>
+    </changeSet>
 </databaseChangeLog>
